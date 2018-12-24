@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+	<div id="app">{{messgae}}</div>
+</body>
+	<script>
+		// var dom = document.getElementById('app');
+		// dom.innerHTML = 'hello2'
+
+		// setTimeout(function(){
+		// 	dom.innerHTML = 'world2'
+		// },2000) 
+
+		var app = new Vue({
+			el:"#app",
+			data:{
+				messgae:"hello world2"
+			}
+		})
+
+		setTimeout(function(){
+			app.$data.messgae = "xixixixi"
+		},2000)
+	</script>
+</html>
