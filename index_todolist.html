@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+	<div id="app">
+		<input type="text" v-model="inputValue">
+		<button v-on:click="handleBtnClick">submit</button>
+		<ul>
+			<!-- <li>first lesson</li>
+			<li>second lesson</li>
+			<li>third lesson</li> -->
+			<li v-for="items in list">{{items}}</li>
+		</ul>
+	</div>
+	<script>
+		var app = new Vue({
+			el:"#app",
+			data:{
+				list:[],
+				inputValue:""
+			},
+			methods:{
+				handleBtnClick(){
+					// alert("click")
+					this.list.push(this.inputValue)	
+					this.inputValue = ""				
+				}
+			}
+		}) 
+		
+	</script>
+</body>
+
+</html>
